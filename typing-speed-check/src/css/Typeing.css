@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: black;
 }
 .typing-speed-checker {
@@ -85,4 +85,161 @@ body{
 
 .reset-button:hover {
   background-color: #0056b3;
+} */
+
+/* Background for the entire page */
+body {
+  background-color: #121212; /* A dark, elegant background */
+  color: #f8f9fa; /* Light text for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Typing Speed Checker Container */
+.typing-speed-checker {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #1e1e2f; /* Darker background for card */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+  color: #f8f9fa; /* Light text color */
+}
+
+/* Title Styling */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffcc00; /* A warm highlight color for the title */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Sentence Display */
+.sentence {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ddd; /* Slightly muted text for readability */
+  background-color: #252542; /* Subtle dark background */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for the sentence box */
+}
+
+/* Correct and Incorrect Character Highlighting */
+.sentence span {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.correct {
+  color: #28a745; /* Bright green for correct text */
+}
+
+.incorrect {
+  color: #dc3545; /* Bright red for incorrect text */
+  text-decoration: underline;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Input Field Styling */
+.input-field {
+  width: 100%;
+  max-width: 500px;
+  font-size: 16px;
+  padding: 12px;
+  border: 2px solid #444; /* Subtle border for dark mode */
+  border-radius: 8px;
+  background-color: #1f1f3a; /* Slightly lighter background for contrast */
+  color: #fff; /* Light text for input */
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #ffcc00; /* Highlight input on focus */
+  background-color: #2b2b4e; /* Slightly lighter background */
+}
+
+/* Result Text Styling */
+.result {
+  font-size: 22px;
+  color: #28a745; /* Bright green result */
+  margin-top: 20px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Result Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reset Button */
+.reset-button {
+  font-size: 16px;
+  padding: 12px 25px;
+  color: #fff;
+  background-color: #007bff; /* Blue for primary action */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:active {
+  transform: translateY(0); /* Remove lift on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .typing-speed-checker {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .sentence {
+    font-size: 16px;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+
+  .reset-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }

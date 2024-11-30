@@ -2,11 +2,15 @@ import { useState, useRef, useEffect } from "react";
 import "../css/Typeing.css";
 
 const sentences = [
-  "The quick brown fox jumps over the lazy dog",
-  "Practice makes a man perfect",
-  "React is a powerful JavaScript library",
-  "Typing speed tests can be fun and challenging",
-  "Consistency is key to improvement",
+  "react can be used to develop single page mobile or server rendered applications with frameworks like nextjs because react is only concerned with the user interface and rendering components to the dom react applications often rely on libraries for routing and other client side functionality",
+  
+  "nodejs lets developers use javascript to write command line tools and for server side scripting the ability to run javascript code on the server is often used to generate dynamic web page content before the page is sent to the users web browser",
+  
+  "javascript is a versatile programming language used for both front end and back end development it powers modern web applications and enhances user interactivity",
+  
+  "express is a popular framework for building web applications with nodejs providing robust features for web and mobile applications",
+  
+  "mongodb is a nosql database that stores data in flexible json like documents enabling developers to build scalable and high performance applications"
 ];
 
 function TypingSpeed() {
@@ -26,7 +30,7 @@ function TypingSpeed() {
 
   const handleChange = (e) => {
     if (!startTime) {
-      setStartTime(new Date()); 
+      setStartTime(new Date());
     }
     setInput(e.target.value);
 
@@ -37,7 +41,7 @@ function TypingSpeed() {
 
   const calculateWPM = () => {
     const endTime = new Date();
-    const timeTaken = (endTime - startTime) / 1000 / 60; 
+    const timeTaken = (endTime - startTime) / 1000 / 60;
     const words = sentence.split(" ").length;
     setWpm(Math.round(words / timeTaken));
   };
@@ -73,7 +77,7 @@ function TypingSpeed() {
         ))}
       </p>
       <div className="input-container">
-        <input
+        <textarea
           ref={inputRef}
           type="text"
           value={input}
